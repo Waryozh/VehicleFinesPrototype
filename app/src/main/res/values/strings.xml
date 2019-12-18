@@ -1,10 +1,22 @@
 <resources>
     <string name="app_name">VehicleFinesPrototype</string>
     <string name="loading">Загрузка…</string>
+
     <string name="welcome_button_enter">ВВЕСТИ ДАННЫЕ</string>
     <string name="welcome_gibdd_fines">Штрафы ГИБДД</string>
     <string name="welcome_check_fines">Проверьте штрафы\nв официальных источниках</string>
     <string name="welcome_gibdd_logo">ГИБДД</string>
     <string name="welcome_treasury_logo">Казначейство</string>
     <string name="welcome_gosuslugi_logo">Госуслуги</string>
+
+    <string name="hint_reg_number">А000АА 77</string>
+    <string name="hint_passport_number">00 АА 000000</string>
+    <string name="hint_driver_licence">00 АА 000000</string>
+
+    <string name="wizard_button_proceed">ДАЛЕЕ</string>
+    <string name="wizard_button_skip">ПРОПУСТИТЬ</string>
+
+    <string name="wizard_reg_number_title">Укажите регистрационный номер ТС</string>
+    <string name="wizard_passport_number_title">Введите номер свидетельства о регистрации ТС</string>
+    <string name="wizard_driver_licence_title">Введите номер водительского удостоверения</string>
 </resources>

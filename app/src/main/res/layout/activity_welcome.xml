@@ -67,12 +67,13 @@
 
     <Button
         android:id="@+id/btn_welcome_enter"
-        style="@style/ControlButtons"
+        style="@style/Buttons.Large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_small_8"
         android:layout_marginEnd="@dimen/spacing_small_8"
         android:layout_marginBottom="@dimen/spacing_normal_16"
+        android:onClick="startWizardActivity"
         android:paddingTop="@dimen/spacing_normal_16"
         android:paddingBottom="@dimen/spacing_normal_16"
         android:text="@string/welcome_button_enter"
