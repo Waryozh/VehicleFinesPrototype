@@ -5,17 +5,17 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ui.StartingActivity">
+    tools:context=".start.StartingActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/loading"
-        android:textSize="18sp" />
+        android:textSize="@dimen/font_large_20" />
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="@dimen/spacing_small_8" />
 
 </LinearLayout>

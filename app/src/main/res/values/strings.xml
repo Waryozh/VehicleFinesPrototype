@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">VehicleFinesPrototype</string>
     <string name="loading">Загрузка…</string>
+    <string name="welcome_button_enter">ВВЕСТИ ДАННЫЕ</string>
+    <string name="welcome_gibdd_fines">Штрафы ГИБДД</string>
+    <string name="welcome_check_fines">Проверьте штрафы\nв официальных источниках</string>
+    <string name="welcome_gibdd_logo">ГИБДД</string>
+    <string name="welcome_treasury_logo">Казначейство</string>
+    <string name="welcome_gosuslugi_logo">Госуслуги</string>
 </resources>

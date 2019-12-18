@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".welcome.WelcomeActivity">
+
+    <TextView
+        android:id="@+id/tv_welcome_gibdd"
+        style="@style/TextAppearance.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_normal_16"
+        android:text="@string/welcome_gibdd_fines"
+        app:layout_constraintBottom_toTopOf="@+id/tv_welcome_check_fines"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome_check_fines"
+        style="@style/TextAppearance.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_check_fines"
+        app:layout_constraintBottom_toTopOf="@+id/tv_welcome_treasury_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome_gibdd_logo"
+        style="@style/TextAppearance.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_info_black_48dp"
+        android:text="@string/welcome_gibdd_logo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_welcome_treasury_logo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_welcome_treasury_logo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome_treasury_logo"
+        style="@style/TextAppearance.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_large_32"
+        android:drawableTop="@drawable/ic_info_black_48dp"
+        android:text="@string/welcome_treasury_logo"
+        app:layout_constraintBottom_toTopOf="@+id/btn_welcome_enter"
+        app:layout_constraintEnd_toStartOf="@+id/tv_welcome_gosuslugi_logo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_welcome_gibdd_logo" />
+
+    <TextView
+        android:id="@+id/tv_welcome_gosuslugi_logo"
+        style="@style/TextAppearance.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_info_black_48dp"
+        android:text="@string/welcome_gosuslugi_logo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_welcome_treasury_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_welcome_treasury_logo" />
+
+    <Button
+        android:id="@+id/btn_welcome_enter"
+        style="@style/ControlButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_small_8"
+        android:layout_marginEnd="@dimen/spacing_small_8"
+        android:layout_marginBottom="@dimen/spacing_normal_16"
+        android:paddingTop="@dimen/spacing_normal_16"
+        android:paddingBottom="@dimen/spacing_normal_16"
+        android:text="@string/welcome_button_enter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
