@@ -1,4 +1,4 @@
-package ru.waryozh.vehiclefinesprototype.wizard
+package ru.waryozh.vehiclefinesprototype.wizard.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.fragment_wizard_reg_number.view.*
 import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.WizardRegNumberFragmentComponent
+import ru.waryozh.vehiclefinesprototype.wizard.WizardViewModel
 import ru.waryozh.vehiclefinesprototype.wizard.dialogs.SkipRegNumberDialogFragment
 import javax.inject.Inject
 
@@ -42,7 +43,9 @@ class WizardRegNumberFragment : Fragment(),
         view.btn_wizard_reg_number_proceed.setOnClickListener { navigateToWizardPassportNumberFragment() }
 
         view.btn_wizard_reg_number_skip.setOnClickListener {
-            SkipRegNumberDialogFragment().show(childFragmentManager, SKIP_REG_NUMBER_DIALOG_TAG)
+            SkipRegNumberDialogFragment().show(childFragmentManager,
+                SKIP_REG_NUMBER_DIALOG_TAG
+            )
         }
 
         return view

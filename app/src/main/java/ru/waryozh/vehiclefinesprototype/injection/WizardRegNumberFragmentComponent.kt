@@ -1,7 +1,7 @@
 package ru.waryozh.vehiclefinesprototype.injection
 
 import dagger.Subcomponent
-import ru.waryozh.vehiclefinesprototype.wizard.WizardRegNumberFragment
+import ru.waryozh.vehiclefinesprototype.wizard.fragments.WizardRegNumberFragment
 
 @Subcomponent(modules = [WizardRegNumberFragmentComponent.Module::class])
 interface WizardRegNumberFragmentComponent {

@@ -1,4 +1,4 @@
-package ru.waryozh.vehiclefinesprototype.wizard
+package ru.waryozh.vehiclefinesprototype.wizard.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,6 +14,7 @@ import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.WizardDriverLicenceFragmentComponent
 import ru.waryozh.vehiclefinesprototype.overview.OverviewActivity
+import ru.waryozh.vehiclefinesprototype.wizard.WizardViewModel
 import ru.waryozh.vehiclefinesprototype.wizard.dialogs.SkipDriverLicenceDialogFragment
 import javax.inject.Inject
 

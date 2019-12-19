@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="ru.waryozh.vehiclefinesprototype.wizard.WelcomeFragment"
+        android:name="ru.waryozh.vehiclefinesprototype.wizard.fragments.WizardWelcomeFragment"
         android:label="WelcomeFragment"
         tools:layout="@layout/fragment_wizard_welcome">
         <action
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/wizardRegNumberFragment"
-        android:name="ru.waryozh.vehiclefinesprototype.wizard.WizardRegNumberFragment"
+        android:name="ru.waryozh.vehiclefinesprototype.wizard.fragments.WizardRegNumberFragment"
         android:label="WizardRegNumberFragment"
         tools:layout="@layout/fragment_wizard_reg_number">
         <action
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/wizardPassportNumberFragment"
-        android:name="ru.waryozh.vehiclefinesprototype.wizard.WizardPassportNumberFragment"
+        android:name="ru.waryozh.vehiclefinesprototype.wizard.fragments.WizardPassportNumberFragment"
         android:label="WizardPassportNumberFragment"
         tools:layout="@layout/fragment_wizard_passport_number">
         <action
@@ -48,7 +48,7 @@
 
     <fragment
         android:id="@+id/wizardDriverLicenceFragment"
-        android:name="ru.waryozh.vehiclefinesprototype.wizard.WizardDriverLicenceFragment"
+        android:name="ru.waryozh.vehiclefinesprototype.wizard.fragments.WizardDriverLicenceFragment"
         android:label="WizardDriverLicenceFragment"
         tools:layout="@layout/fragment_wizard_driver_licence" />
 

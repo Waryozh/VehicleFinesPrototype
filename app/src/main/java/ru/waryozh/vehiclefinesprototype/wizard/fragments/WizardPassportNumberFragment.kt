@@ -1,4 +1,4 @@
-package ru.waryozh.vehiclefinesprototype.wizard
+package ru.waryozh.vehiclefinesprototype.wizard.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.fragment_wizard_passport_number.view.*
 import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.WizardPassportNumberFragmentComponent
+import ru.waryozh.vehiclefinesprototype.wizard.WizardViewModel
 import ru.waryozh.vehiclefinesprototype.wizard.dialogs.SkipPassportNumberDialogFragment
 import javax.inject.Inject
 
