@@ -12,7 +12,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".overview.OverviewActivity" />
         <activity android:name=".wizard.WizardActivity" />
-        <activity android:name=".welcome.WelcomeActivity" />
         <activity android:name=".start.StartingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

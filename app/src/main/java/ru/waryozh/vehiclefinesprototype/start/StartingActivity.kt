@@ -10,7 +10,7 @@ import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.StartingActivityComponent
 import ru.waryozh.vehiclefinesprototype.overview.OverviewActivity
-import ru.waryozh.vehiclefinesprototype.welcome.WelcomeActivity
+import ru.waryozh.vehiclefinesprototype.wizard.WizardActivity
 import javax.inject.Inject
 
 class StartingActivity : AppCompatActivity() {
@@ -36,7 +36,7 @@ class StartingActivity : AppCompatActivity() {
             if (startingViewModel.getShouldShowOverview()) {
                 startActivity(Intent(this, OverviewActivity::class.java))
             } else if (startingViewModel.getShouldShowWelcome()) {
-                startActivity(Intent(this, WelcomeActivity::class.java))
+                startActivity(Intent(this, WizardActivity::class.java))
             }
             finish()
         }, 1000)

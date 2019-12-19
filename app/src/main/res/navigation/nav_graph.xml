@@ -3,7 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/wizardRegNumberFragment">
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="ru.waryozh.vehiclefinesprototype.wizard.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_wizard_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_wizardRegNumberFragment"
+            app:destination="@id/wizardRegNumberFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:popEnterAnim="@anim/left_to_right" />
+    </fragment>
 
     <fragment
         android:id="@+id/wizardRegNumberFragment"
