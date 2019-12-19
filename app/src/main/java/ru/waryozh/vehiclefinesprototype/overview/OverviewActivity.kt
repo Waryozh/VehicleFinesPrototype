@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import kotlinx.android.synthetic.main.activity_overview.*
 import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.OverviewActivityComponent
@@ -25,5 +26,9 @@ class OverviewActivity : AppCompatActivity() {
         (application as App).appComponent
             .plus(OverviewActivityComponent.Module())
             .inject(this)
+
+        tv_overview_reg_number.text = overviewViewModel.getRegNumber()
+        tv_overview_passport_number.text = overviewViewModel.getPassportNumber()
+        tv_overview_driver_licence.text = overviewViewModel.getDriverLicence()
     }
 }
