@@ -14,9 +14,13 @@ import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.WizardDriverLicenceFragmentComponent
 import ru.waryozh.vehiclefinesprototype.overview.OverviewActivity
+import ru.waryozh.vehiclefinesprototype.wizard.dialogs.SkipDriverLicenceDialogFragment
 import javax.inject.Inject
 
-class WizardDriverLicenceFragment : Fragment() {
+private const val SKIP_DRIVER_LICENCE_DIALOG_TAG = "SKIP_DRIVER_LICENCE_DIALOG_TAG"
+
+class WizardDriverLicenceFragment : Fragment(),
+    SkipDriverLicenceDialogFragment.SkipDriverLicenceDialogListener {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -35,12 +39,27 @@ class WizardDriverLicenceFragment : Fragment() {
             .inject(this)
 
         val view = inflater.inflate(R.layout.fragment_wizard_driver_licence, container, false)
-        view.btn_wizard_driver_licence_proceed.setOnClickListener { navigateToOverviewActivity() }
+
+        view.btn_wizard_driver_licence_proceed.setOnClickListener {
+            wizardViewModel.setDriverLicence(et_wizard_driver_licence.text.toString())
+            navigateToOverviewActivity()
+        }
+
+        view.btn_wizard_driver_licence_skip.setOnClickListener {
+            SkipDriverLicenceDialogFragment().show(
+                childFragmentManager,
+                SKIP_DRIVER_LICENCE_DIALOG_TAG
+            )
+        }
+
         return view
     }
 
     private fun navigateToOverviewActivity() {
-        wizardViewModel.setDriverLicence(et_wizard_driver_licence.text.toString())
         startActivity(Intent(requireContext(), OverviewActivity::class.java))
+    }
+
+    override fun onSkipDriverLicenceDialogPositiveClick() {
+        navigateToOverviewActivity()
     }
 }

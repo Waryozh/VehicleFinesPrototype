@@ -25,4 +25,10 @@
     <string name="overview_passport_number_label">Свидетельство о регистрации ТС</string>
     <string name="overview_driver_licence_label">Водительское удостоверение</string>
     <string name="overview_warning_label">Внимание!\nДанный раздел находится в разработке</string>
+
+    <string name="skip_enter_dialog">Пропустить</string>
+    <string name="dismiss_enter_dialog">Ввести номер</string>
+    <string name="skip_reg_number_dialog_title">Если вы не введете регистрационный номер ТС, вы не сможете следить за штрафами, выписанными на автомобиль</string>
+    <string name="skip_passport_number_dialog_title">Если вы не введете номер свидетельства о регистрации ТС, вы не сможете следить за штрафами, выписанными на автомобиль</string>
+    <string name="skip_driver_licence_dialog_title">Если вы не введете номер водительского удостоверения, вы не сможете следить за штрафами, выписанными на водителя</string>
 </resources>

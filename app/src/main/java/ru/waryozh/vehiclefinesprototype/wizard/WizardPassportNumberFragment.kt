@@ -13,9 +13,13 @@ import kotlinx.android.synthetic.main.fragment_wizard_passport_number.view.*
 import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.WizardPassportNumberFragmentComponent
+import ru.waryozh.vehiclefinesprototype.wizard.dialogs.SkipPassportNumberDialogFragment
 import javax.inject.Inject
 
-class WizardPassportNumberFragment : Fragment() {
+private const val SKIP_PASSPORT_NUMBER_DIALOG_TAG = "SKIP_PASSPORT_NUMBER_DIALOG_TAG"
+
+class WizardPassportNumberFragment : Fragment(),
+    SkipPassportNumberDialogFragment.SkipPassportNumberDialogListener {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -34,12 +38,27 @@ class WizardPassportNumberFragment : Fragment() {
             .inject(this)
 
         val view = inflater.inflate(R.layout.fragment_wizard_passport_number, container, false)
-        view.btn_wizard_passport_number_proceed.setOnClickListener { navigateToWizardDriverLicenceFragment() }
+
+        view.btn_wizard_passport_number_proceed.setOnClickListener {
+            wizardViewModel.setPassportNumber(et_wizard_passport_number.text.toString())
+            navigateToWizardDriverLicenceFragment()
+        }
+
+        view.btn_wizard_passport_number_skip.setOnClickListener {
+            SkipPassportNumberDialogFragment().show(
+                childFragmentManager,
+                SKIP_PASSPORT_NUMBER_DIALOG_TAG
+            )
+        }
+
         return view
     }
 
     private fun navigateToWizardDriverLicenceFragment() {
-        wizardViewModel.setPassportNumber(et_wizard_passport_number.text.toString())
         findNavController().navigate(WizardPassportNumberFragmentDirections.actionWizardPassportNumberFragmentToWizardDriverLicenceFragment())
+    }
+
+    override fun onSkipPassportNumberDialogPositiveClick() {
+        navigateToWizardDriverLicenceFragment()
     }
 }
