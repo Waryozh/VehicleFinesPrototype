@@ -16,4 +16,6 @@ interface AppComponent {
     fun inject(app: App)
 
     fun plus(module: StartingActivityComponent.Module): StartingActivityComponent
+
+    fun plus(module: OverviewActivityComponent.Module): OverviewActivityComponent
 }

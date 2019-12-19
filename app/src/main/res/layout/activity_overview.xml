@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/spacing_normal_16"
+    tools:context=".overview.OverviewActivity">
+
+    <TextView
+        android:id="@+id/tv_overview_title"
+        style="@style/TextAppearance.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/overview_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_overview_reg_number_label"
+        style="@style/TextAppearance.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:text="@string/overview_reg_number_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_overview_title" />
+
+    <TextView
+        android:id="@+id/tv_overview_reg_number"
+        style="@style/TextAppearance.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        app:layout_constraintStart_toStartOf="@+id/tv_overview_reg_number_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_overview_reg_number_label"
+        tools:text="@string/hint_reg_number" />
+
+    <View
+        android:id="@+id/divider_overview_reg_passport"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_overview_reg_number" />
+
+    <TextView
+        android:id="@+id/tv_overview_passport_number_label"
+        style="@style/TextAppearance.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:text="@string/overview_passport_number_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_overview_reg_number"
+        app:layout_constraintTop_toBottomOf="@+id/divider_overview_reg_passport" />
+
+    <TextView
+        android:id="@+id/tv_overview_passport_number"
+        style="@style/TextAppearance.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        app:layout_constraintStart_toStartOf="@+id/tv_overview_passport_number_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_overview_passport_number_label"
+        tools:text="@string/hint_passport_number" />
+
+    <View
+        android:id="@+id/divider_overview_passport_licence"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_overview_passport_number" />
+
+    <TextView
+        android:id="@+id/tv_overview_driver_licence_label"
+        style="@style/TextAppearance.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:text="@string/overview_driver_licence_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_overview_passport_number"
+        app:layout_constraintTop_toBottomOf="@+id/divider_overview_passport_licence" />
+
+    <TextView
+        android:id="@+id/tv_overview_driver_licence"
+        style="@style/TextAppearance.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        app:layout_constraintStart_toStartOf="@+id/tv_overview_driver_licence_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_overview_driver_licence_label"
+        tools:text="@string/hint_driver_licence" />
+
+    <TextView
+        android:id="@+id/tv_overview_warning"
+        style="@style/TextAppearance.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/overview_warning_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_overview_driver_licence" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

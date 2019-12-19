@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import ru.waryozh.vehiclefinesprototype.overview.OverviewViewModel
 import ru.waryozh.vehiclefinesprototype.start.StartingViewModel
 import ru.waryozh.vehiclefinesprototype.viewmodels.ViewModelFactory
 
@@ -16,5 +17,10 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(StartingViewModel::class)
-    abstract fun bindStartingViewModel(startingViewModel: StartingViewModel): ViewModel
+    abstract fun bindStartingViewModel(viewModel: StartingViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(OverviewViewModel::class)
+    abstract fun bindOverviewViewModel(viewModel: OverviewViewModel): ViewModel
 }

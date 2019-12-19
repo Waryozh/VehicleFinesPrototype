@@ -19,4 +19,10 @@
     <string name="wizard_reg_number_title">Укажите регистрационный номер ТС</string>
     <string name="wizard_passport_number_title">Введите номер свидетельства о регистрации ТС</string>
     <string name="wizard_driver_licence_title">Введите номер водительского удостоверения</string>
+
+    <string name="overview_title">Мои данные</string>
+    <string name="overview_reg_number_label">Регистрационный номер ТС</string>
+    <string name="overview_passport_number_label">Свидетельство о регистрации ТС</string>
+    <string name="overview_driver_licence_label">Водительское удостоверение</string>
+    <string name="overview_warning_label">Внимание!\nДанный раздел находится в разработке</string>
 </resources>
