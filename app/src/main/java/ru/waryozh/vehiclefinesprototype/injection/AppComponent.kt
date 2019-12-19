@@ -17,5 +17,11 @@ interface AppComponent {
 
     fun plus(module: StartingActivityComponent.Module): StartingActivityComponent
 
+    fun plus(module: WizardRegNumberFragmentComponent.Module): WizardRegNumberFragmentComponent
+
+    fun plus(module: WizardPassportNumberFragmentComponent.Module): WizardPassportNumberFragmentComponent
+
+    fun plus(module: WizardDriverLicenceFragmentComponent.Module): WizardDriverLicenceFragmentComponent
+
     fun plus(module: OverviewActivityComponent.Module): OverviewActivityComponent
 }

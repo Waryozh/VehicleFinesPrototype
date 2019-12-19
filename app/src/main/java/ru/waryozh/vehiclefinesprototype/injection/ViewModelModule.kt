@@ -8,6 +8,7 @@ import dagger.multibindings.IntoMap
 import ru.waryozh.vehiclefinesprototype.overview.OverviewViewModel
 import ru.waryozh.vehiclefinesprototype.start.StartingViewModel
 import ru.waryozh.vehiclefinesprototype.viewmodels.ViewModelFactory
+import ru.waryozh.vehiclefinesprototype.wizard.WizardViewModel
 
 @Module
 abstract class ViewModelModule {
@@ -18,6 +19,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(StartingViewModel::class)
     abstract fun bindStartingViewModel(viewModel: StartingViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(WizardViewModel::class)
+    abstract fun bindWizardViewModel(viewModel: WizardViewModel): ViewModel
 
     @Binds
     @IntoMap

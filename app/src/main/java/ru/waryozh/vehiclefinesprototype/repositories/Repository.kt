@@ -24,7 +24,25 @@ class Repository @Inject constructor(private val prefs: SharedPreferences) {
 
     fun getRegNumber() = prefs.getString(REG_NUMBER, "")
 
+    fun setRegNumber(regNumber: String) {
+        prefs.edit {
+            putString(REG_NUMBER, regNumber)
+        }
+    }
+
     fun getPassportNumber() = prefs.getString(PASSPORT_NUMBER, "")
 
+    fun setPassportNumber(passportNumber: String) {
+        prefs.edit {
+            putString(PASSPORT_NUMBER, passportNumber)
+        }
+    }
+
     fun getDriverLicence() = prefs.getString(DRIVER_LICENCE, "")
+
+    fun setDriverLicence(driverLicence: String) {
+        prefs.edit {
+            putString(DRIVER_LICENCE, driverLicence)
+        }
+    }
 }
