@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProviders
 import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.StartingActivityComponent
+import ru.waryozh.vehiclefinesprototype.overview.OverviewActivity
 import ru.waryozh.vehiclefinesprototype.welcome.WelcomeActivity
 import javax.inject.Inject
 
@@ -32,7 +33,9 @@ class StartingActivity : AppCompatActivity() {
         // This is an artificial delay to show this activity before another one is started.
         // For use only in the prototype version of the app.
         Handler().postDelayed({
-            if (startingViewModel.getShouldShowWelcome()) {
+            if (startingViewModel.getShouldShowOverview()) {
+                startActivity(Intent(this, OverviewActivity::class.java))
+            } else if (startingViewModel.getShouldShowWelcome()) {
                 startActivity(Intent(this, WelcomeActivity::class.java))
             }
             finish()

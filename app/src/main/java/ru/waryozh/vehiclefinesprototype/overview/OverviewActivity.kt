@@ -27,6 +27,9 @@ class OverviewActivity : AppCompatActivity() {
             .plus(OverviewActivityComponent.Module())
             .inject(this)
 
+        // Once we get to OverviewActivity, mark it as the activity that StartingActivity should start
+        overviewViewModel.setShouldShowOverview(true)
+
         tv_overview_reg_number.text = overviewViewModel.getRegNumber()
         tv_overview_passport_number.text = overviewViewModel.getPassportNumber()
         tv_overview_driver_licence.text = overviewViewModel.getDriverLicence()

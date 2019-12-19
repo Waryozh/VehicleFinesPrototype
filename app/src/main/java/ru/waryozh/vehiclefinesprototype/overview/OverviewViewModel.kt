@@ -10,4 +10,8 @@ class OverviewViewModel @Inject constructor(private val repository: Repository) 
     fun getPassportNumber() = repository.getPassportNumber()
 
     fun getDriverLicence() = repository.getDriverLicence()
+
+    fun setShouldShowOverview(shouldShowOverview: Boolean) {
+        repository.setShouldShowOverview(shouldShowOverview)
+    }
 }
