@@ -17,6 +17,7 @@
         android:id="@+id/til_wizard_passport_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/hint_passport_number"
         android:paddingStart="@dimen/spacing_normal_16"
         android:paddingTop="@dimen/spacing_normal_16"
         android:paddingEnd="@dimen/spacing_normal_16"
@@ -27,7 +28,6 @@
             style="@style/TextAppearance.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_passport_number"
             android:inputType="textCapCharacters" />
 
     </com.google.android.material.textfield.TextInputLayout>

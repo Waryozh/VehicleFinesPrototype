@@ -17,6 +17,7 @@
         android:id="@+id/til_wizard_driver_licence"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/hint_driver_licence"
         android:paddingStart="@dimen/spacing_normal_16"
         android:paddingTop="@dimen/spacing_normal_16"
         android:paddingEnd="@dimen/spacing_normal_16"
@@ -27,7 +28,6 @@
             style="@style/TextAppearance.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_driver_licence"
             android:inputType="textCapCharacters" />
 
     </com.google.android.material.textfield.TextInputLayout>
