@@ -56,6 +56,7 @@ class WizardDriverLicenceFragment : Fragment(),
     }
 
     private fun navigateToOverviewActivity() {
+        activity!!.finish()
         startActivity(Intent(requireContext(), OverviewActivity::class.java))
     }
 
