@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_wizard_reg_number">
         <action
             android:id="@+id/action_wizardRegNumberFragment_to_wizardPassportNumberFragment"
-            app:destination="@id/wizardPassportNumberFragment" />
+            app:destination="@id/wizardPassportNumberFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:popEnterAnim="@anim/left_to_right" />
     </fragment>
 
     <fragment
@@ -22,7 +24,9 @@
         tools:layout="@layout/fragment_wizard_passport_number">
         <action
             android:id="@+id/action_wizardPassportNumberFragment_to_wizardDriverLicenceFragment"
-            app:destination="@id/wizardDriverLicenceFragment" />
+            app:destination="@id/wizardDriverLicenceFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:popEnterAnim="@anim/left_to_right" />
     </fragment>
 
     <fragment
