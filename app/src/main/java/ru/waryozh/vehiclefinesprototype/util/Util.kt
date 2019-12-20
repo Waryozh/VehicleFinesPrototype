@@ -30,3 +30,6 @@ fun String.isValidRegNumber(): Boolean =
                 "(?:$VALID_LETTERS\\d{6,7})|" +                         // type 20
                 "(?:\\d{3}$VALID_LETTERS\\d{2,3})\$"                    // type 21
     ).matches(this.transliterate())
+
+fun String.isValidVehiclePassportOrLicenceNumber(): Boolean =
+    Regex("^\\d{2}(?:$VALID_LETTERS{2}|\\d{2})\\d{6}\$").matches(this.transliterate())

@@ -43,6 +43,13 @@ class WizardRegNumberFragment : Fragment(),
 
         val view = inflater.inflate(R.layout.fragment_wizard_reg_number, container, false)
 
+        view.btn_wizard_reg_number_skip.setOnClickListener {
+            SkipRegNumberDialogFragment().show(
+                childFragmentManager,
+                SKIP_REG_NUMBER_DIALOG_TAG
+            )
+        }
+
         view.btn_wizard_reg_number_proceed.setOnClickListener {
             // When this button is clicked, text input field might be empty
             // and with its error disabled, so ask view model to validate it.
@@ -50,13 +57,6 @@ class WizardRegNumberFragment : Fragment(),
             if (wizardViewModel.isRegNumberInvalid.value == false) {
                 navigateToWizardPassportNumberFragment()
             }
-        }
-
-        view.btn_wizard_reg_number_skip.setOnClickListener {
-            SkipRegNumberDialogFragment().show(
-                childFragmentManager,
-                SKIP_REG_NUMBER_DIALOG_TAG
-            )
         }
 
         view.et_wizard_reg_number.addTextChangedListener(object : TextWatcher {

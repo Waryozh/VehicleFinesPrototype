@@ -37,5 +37,6 @@
     <string name="passport_number_invalid">Номер СТС введен некорректно</string>
     <string name="licence_number_invalid">Номер ВУ введен некорректно</string>
 
-    <string name="allowed_characters">0123456789АВЕКМНОРСТУХABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="allowed_characters_reg_number">0123456789АВЕКМНОРСТУХABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="allowed_characters_passport_and_licence">0123456789АВЕКМНОРСТУХABEKMHOPCTYX</string>
 </resources>

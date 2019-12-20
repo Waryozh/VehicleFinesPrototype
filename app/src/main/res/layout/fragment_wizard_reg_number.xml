@@ -28,7 +28,7 @@
             style="@style/TextAppearance.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:digits="@string/allowed_characters"
+            android:digits="@string/allowed_characters_reg_number"
             android:inputType="textCapCharacters" />
 
     </com.google.android.material.textfield.TextInputLayout>
