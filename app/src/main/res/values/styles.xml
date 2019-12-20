@@ -35,6 +35,12 @@
         <item name="android:textSize">@dimen/font_medium_16</item>
     </style>
 
+    <style name="TextAppearance.Button" parent="TextAppearance">
+        <item name="android:textSize">@dimen/font_large_20</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
     <style name="TextAppearance.EditText" parent="TextAppearance">
         <item name="android:textAlignment">textStart</item>
         <item name="android:textSize">@dimen/font_large_20</item>

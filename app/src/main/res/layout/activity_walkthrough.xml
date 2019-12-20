@@ -77,13 +77,21 @@
 
     </RelativeLayout>
 
-    <Button
+    <FrameLayout
         android:id="@+id/btn_walkthrough_proceed"
-        style="@style/Buttons.Large"
         android:layout_width="match_parent"
         android:layout_height="@dimen/spacing_huge_64"
         android:layout_alignParentBottom="true"
-        android:text="@string/walkthrough_get_fines"
-        android:visibility="invisible" />
+        android:background="@color/colorAccent"
+        android:visibility="invisible">
+
+        <TextView
+            style="@style/TextAppearance.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/walkthrough_get_fines" />
+
+    </FrameLayout>
 
 </RelativeLayout>
