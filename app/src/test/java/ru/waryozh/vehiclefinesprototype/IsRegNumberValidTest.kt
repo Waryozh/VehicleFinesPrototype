@@ -42,7 +42,6 @@ class IsRegNumberValidTest {
         // Types 9, 10, 11
         assertEquals(true,  "002CD178".isValidRegNumber())
         assertEquals(true,  "002CD1780".isValidRegNumber())
-        assertEquals(false, "002C178".isValidRegNumber())
 
         assertEquals(true,  "002D04078".isValidRegNumber())
         assertEquals(true,  "002T04078".isValidRegNumber())
@@ -52,5 +51,23 @@ class IsRegNumberValidTest {
         assertEquals(true,  "D8762377".isValidRegNumber())
         assertEquals(true,  "D87623770".isValidRegNumber())
         assertEquals(false, "A87623770".isValidRegNumber())
+    }
+
+    @Test
+    fun type20() {
+        assertEquals(true, "А123478".isValidRegNumber())
+        assertEquals(true, "А1234780".isValidRegNumber())
+    }
+
+    @Test
+    fun type21() {
+        assertEquals(true, "012А36".isValidRegNumber())
+        assertEquals(true, "012А360".isValidRegNumber())
+    }
+
+    @Test
+    fun type22() {
+        assertEquals(true, "5537А99".isValidRegNumber())
+        assertEquals(true, "5537А990".isValidRegNumber())
     }
 }
