@@ -42,6 +42,9 @@ dependencies {
     // Shared Preferences
     implementation 'androidx.preference:preference-ktx:1.1.0'
 
+    // ViewPager2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
     // Dependency injection
     implementation 'com.google.dagger:dagger:2.24'
     kapt 'com.google.dagger:dagger-compiler:2.24'

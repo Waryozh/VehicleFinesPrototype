@@ -39,4 +39,12 @@
 
     <string name="allowed_characters_reg_number">0123456789АВЕКМНОРСТУХABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     <string name="allowed_characters_passport_and_licence">0123456789АВЕКМНОРСТУХABEKMHOPCTYX</string>
+    
+    <string name="walkthrough_push_notifications">Получайте push-уведомления о новых штрафах</string>
+    <string name="walkthrough_pay_via_app">Оплачивайте штрафы через приложение</string>
+    <string name="walkthrough_discount">Скидка 50%</string>
+    <string name="walkthrough_bank_receipt">Получайте квитанцию, как в банке</string>
+    <string name="walkthrough_guarantee">Гарантия погашения в государственной базе данных</string>
+    <string name="walkthrough_observe_rules">Соблюдайте правила дорожного движения.</string>
+    <string name="walkthrough_get_fines">УЗНАТЬ ШТРАФЫ</string>
 </resources>

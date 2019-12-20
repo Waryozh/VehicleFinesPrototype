@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".walkthrough.WalkthroughActivity" />
         <activity android:name=".overview.OverviewActivity" />
         <activity android:name=".wizard.WizardActivity" />
         <activity android:name=".start.StartingActivity">

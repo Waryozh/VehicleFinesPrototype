@@ -9,6 +9,7 @@ import javax.inject.Singleton
 class Repository @Inject constructor(private val prefs: SharedPreferences) {
     companion object {
         private const val SHOULD_SHOW_WELCOME = "SHOULD_SHOW_WELCOME"
+        private const val SHOULD_SHOW_WALKTHROUGH = "SHOULD_SHOW_WALKTHROUGH"
         private const val SHOULD_SHOW_OVERVIEW = "SHOULD_SHOW_OVERVIEW"
 
         private const val REG_NUMBER = "REG_NUMBER"
@@ -18,9 +19,11 @@ class Repository @Inject constructor(private val prefs: SharedPreferences) {
 
     fun getShouldShowWelcome() = prefs.getBoolean(SHOULD_SHOW_WELCOME, true)
 
-    fun setShouldShowWelcome(shouldShowWelcome: Boolean) {
+    fun getShouldShowWalkthrough() = prefs.getBoolean(SHOULD_SHOW_WALKTHROUGH, false)
+
+    fun setShouldShowWalkthrough(shouldShowWalkthrough: Boolean) {
         prefs.edit {
-            putBoolean(SHOULD_SHOW_WELCOME, shouldShowWelcome)
+            putBoolean(SHOULD_SHOW_WALKTHROUGH, shouldShowWalkthrough)
         }
     }
 

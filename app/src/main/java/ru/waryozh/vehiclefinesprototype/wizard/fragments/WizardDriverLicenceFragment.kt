@@ -16,8 +16,8 @@ import kotlinx.android.synthetic.main.fragment_wizard_driver_licence.view.*
 import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.WizardDriverLicenceFragmentComponent
-import ru.waryozh.vehiclefinesprototype.overview.OverviewActivity
 import ru.waryozh.vehiclefinesprototype.util.showSoftKeyboard
+import ru.waryozh.vehiclefinesprototype.walkthrough.WalkthroughActivity
 import ru.waryozh.vehiclefinesprototype.wizard.WizardViewModel
 import ru.waryozh.vehiclefinesprototype.wizard.dialogs.SkipDriverLicenceDialogFragment
 import javax.inject.Inject
@@ -58,7 +58,7 @@ class WizardDriverLicenceFragment : Fragment(),
             wizardViewModel.onDriverLicenceChanged(et_wizard_driver_licence.text.toString())
             if (wizardViewModel.isDriverLicenceInvalid.value == false) {
                 wizardViewModel.setDriverLicence(et_wizard_driver_licence.text.toString())
-                navigateToOverviewActivity()
+                navigateToWalkthroughActivity()
             }
         }
 
@@ -87,12 +87,12 @@ class WizardDriverLicenceFragment : Fragment(),
             if (isError) getString(R.string.licence_number_invalid) else null
     }
 
-    private fun navigateToOverviewActivity() {
-        startActivity(Intent(requireContext(), OverviewActivity::class.java))
+    private fun navigateToWalkthroughActivity() {
+        startActivity(Intent(requireContext(), WalkthroughActivity::class.java))
         activity!!.finish()
     }
 
     override fun onSkipDriverLicenceDialogPositiveClick() {
-        navigateToOverviewActivity()
+        navigateToWalkthroughActivity()
     }
 }

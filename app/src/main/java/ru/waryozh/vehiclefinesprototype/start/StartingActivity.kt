@@ -10,6 +10,7 @@ import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.StartingActivityComponent
 import ru.waryozh.vehiclefinesprototype.overview.OverviewActivity
+import ru.waryozh.vehiclefinesprototype.walkthrough.WalkthroughActivity
 import ru.waryozh.vehiclefinesprototype.wizard.WizardActivity
 import javax.inject.Inject
 
@@ -33,10 +34,16 @@ class StartingActivity : AppCompatActivity() {
         // This is an artificial delay to show this activity before another one is started.
         // For use only in the prototype version of the app.
         Handler().postDelayed({
-            if (startingViewModel.getShouldShowOverview()) {
-                startActivity(Intent(this, OverviewActivity::class.java))
-            } else if (startingViewModel.getShouldShowWelcome()) {
-                startActivity(Intent(this, WizardActivity::class.java))
+            when {
+                startingViewModel.getShouldShowOverview() -> {
+                    startActivity(Intent(this, OverviewActivity::class.java))
+                }
+                startingViewModel.getShouldShowWalkthrough() -> {
+                    startActivity(Intent(this, WalkthroughActivity::class.java))
+                }
+                startingViewModel.getShouldShowWelcome() -> {
+                    startActivity(Intent(this, WizardActivity::class.java))
+                }
             }
             finish()
         }, 1000)

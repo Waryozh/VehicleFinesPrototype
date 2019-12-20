@@ -23,5 +23,7 @@ interface AppComponent {
 
     fun plus(module: WizardDriverLicenceFragmentComponent.Module): WizardDriverLicenceFragmentComponent
 
+    fun plus(module: WalkthroughActivityComponent.Module): WalkthroughActivityComponent
+
     fun plus(module: OverviewActivityComponent.Module): OverviewActivityComponent
 }

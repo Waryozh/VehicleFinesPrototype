@@ -7,5 +7,7 @@ import javax.inject.Inject
 class StartingViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
     fun getShouldShowWelcome() = repository.getShouldShowWelcome()
 
+    fun getShouldShowWalkthrough() = repository.getShouldShowWalkthrough()
+
     fun getShouldShowOverview() = repository.getShouldShowOverview()
 }
