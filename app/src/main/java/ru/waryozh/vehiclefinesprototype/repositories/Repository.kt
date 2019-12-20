@@ -32,7 +32,7 @@ class Repository @Inject constructor(private val prefs: SharedPreferences) {
         }
     }
 
-    fun getRegNumber() = prefs.getString(REG_NUMBER, "")
+    fun getRegNumber() = prefs.getString(REG_NUMBER, null)
 
     fun setRegNumber(regNumber: String) {
         prefs.edit {
@@ -40,7 +40,7 @@ class Repository @Inject constructor(private val prefs: SharedPreferences) {
         }
     }
 
-    fun getPassportNumber() = prefs.getString(PASSPORT_NUMBER, "")
+    fun getPassportNumber() = prefs.getString(PASSPORT_NUMBER, null)
 
     fun setPassportNumber(passportNumber: String) {
         prefs.edit {
@@ -48,7 +48,7 @@ class Repository @Inject constructor(private val prefs: SharedPreferences) {
         }
     }
 
-    fun getDriverLicence() = prefs.getString(DRIVER_LICENCE, "")
+    fun getDriverLicence() = prefs.getString(DRIVER_LICENCE, null)
 
     fun setDriverLicence(driverLicence: String) {
         prefs.edit {

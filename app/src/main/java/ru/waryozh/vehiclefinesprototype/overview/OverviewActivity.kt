@@ -30,8 +30,13 @@ class OverviewActivity : AppCompatActivity() {
         // Once we get to OverviewActivity, mark it as the activity that StartingActivity should start
         overviewViewModel.setShouldShowOverview(true)
 
-        tv_overview_reg_number.text = overviewViewModel.getRegNumber()
-        tv_overview_passport_number.text = overviewViewModel.getPassportNumber()
-        tv_overview_driver_licence.text = overviewViewModel.getDriverLicence()
+        tv_overview_reg_number.text =
+            overviewViewModel.getRegNumber() ?: getString(R.string.overview_empty_placeholder)
+
+        tv_overview_passport_number.text =
+            overviewViewModel.getPassportNumber() ?: getString(R.string.overview_empty_placeholder)
+
+        tv_overview_driver_licence.text =
+            overviewViewModel.getDriverLicence() ?: getString(R.string.overview_empty_placeholder)
     }
 }
