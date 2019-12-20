@@ -1,5 +1,9 @@
 package ru.waryozh.vehiclefinesprototype.util
 
+import android.content.Context
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+
 private const val VALID_LETTERS = "[АВЕКМНОРСТУХ]"
 
 private val engToRusLettersMap = mapOf(
@@ -33,3 +37,12 @@ fun String.isValidRegNumber(): Boolean =
 
 fun String.isValidVehiclePassportOrLicenceNumber(): Boolean =
     Regex("^\\d{2}(?:$VALID_LETTERS{2}|\\d{2})\\d{6}\$").matches(this.transliterate())
+
+fun View.showSoftKeyboard() {
+    post {
+        if (this.requestFocus()) {
+            val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showSoftInput(this, InputMethodManager.SHOW_IMPLICIT)
+        }
+    }
+}

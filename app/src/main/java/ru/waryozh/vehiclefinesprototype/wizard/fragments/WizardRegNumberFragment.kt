@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.fragment_wizard_reg_number.view.*
 import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.WizardRegNumberFragmentComponent
+import ru.waryozh.vehiclefinesprototype.util.showSoftKeyboard
 import ru.waryozh.vehiclefinesprototype.wizard.WizardViewModel
 import ru.waryozh.vehiclefinesprototype.wizard.dialogs.SkipRegNumberDialogFragment
 import javax.inject.Inject
@@ -58,6 +59,8 @@ class WizardRegNumberFragment : Fragment(),
                 navigateToWizardPassportNumberFragment()
             }
         }
+
+        view.et_wizard_reg_number.showSoftKeyboard()
 
         view.et_wizard_reg_number.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {

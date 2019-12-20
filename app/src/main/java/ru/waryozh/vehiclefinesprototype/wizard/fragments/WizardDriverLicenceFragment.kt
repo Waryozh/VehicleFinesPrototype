@@ -17,6 +17,7 @@ import ru.waryozh.vehiclefinesprototype.App
 import ru.waryozh.vehiclefinesprototype.R
 import ru.waryozh.vehiclefinesprototype.injection.WizardDriverLicenceFragmentComponent
 import ru.waryozh.vehiclefinesprototype.overview.OverviewActivity
+import ru.waryozh.vehiclefinesprototype.util.showSoftKeyboard
 import ru.waryozh.vehiclefinesprototype.wizard.WizardViewModel
 import ru.waryozh.vehiclefinesprototype.wizard.dialogs.SkipDriverLicenceDialogFragment
 import javax.inject.Inject
@@ -60,6 +61,8 @@ class WizardDriverLicenceFragment : Fragment(),
                 navigateToOverviewActivity()
             }
         }
+
+        view.et_wizard_driver_licence.showSoftKeyboard()
 
         view.et_wizard_driver_licence.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
