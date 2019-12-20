@@ -3,11 +3,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".walkthrough.WalkthroughActivity">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vp_walkthrough"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/walkthrough_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_huge_64"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/spacing_small_8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_walkthrough_dot1"
+                android:layout_width="@dimen/circle_size_12"
+                android:layout_height="@dimen/circle_size_12"
+                android:layout_margin="@dimen/spacing_tiny_4"
+                android:src="@drawable/dot_selected" />
+
+            <ImageView
+                android:id="@+id/iv_walkthrough_dot2"
+                android:layout_width="@dimen/circle_size_12"
+                android:layout_height="@dimen/circle_size_12"
+                android:layout_margin="@dimen/spacing_tiny_4"
+                android:src="@drawable/dot_default" />
+
+            <ImageView
+                android:id="@+id/iv_walkthrough_dot3"
+                android:layout_width="@dimen/circle_size_12"
+                android:layout_height="@dimen/circle_size_12"
+                android:layout_margin="@dimen/spacing_tiny_4"
+                android:src="@drawable/dot_default" />
+
+            <ImageView
+                android:id="@+id/iv_walkthrough_dot4"
+                android:layout_width="@dimen/circle_size_12"
+                android:layout_height="@dimen/circle_size_12"
+                android:layout_margin="@dimen/spacing_tiny_4"
+                android:src="@drawable/dot_default" />
+
+            <ImageView
+                android:id="@+id/iv_walkthrough_dot5"
+                android:layout_width="@dimen/circle_size_12"
+                android:layout_height="@dimen/circle_size_12"
+                android:layout_margin="@dimen/spacing_tiny_4"
+                android:src="@drawable/dot_default" />
+
+            <ImageView
+                android:id="@+id/iv_walkthrough_dot6"
+                android:layout_width="@dimen/circle_size_12"
+                android:layout_height="@dimen/circle_size_12"
+                android:layout_margin="@dimen/spacing_tiny_4"
+                android:src="@drawable/dot_default" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_walkthrough_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_arrow_forward_white_48dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_walkthrough_proceed"
+        style="@style/Buttons.Large"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_huge_64"
+        android:layout_alignParentBottom="true"
+        android:text="@string/walkthrough_get_fines"
+        android:visibility="invisible" />
 
 </RelativeLayout>

@@ -3,4 +3,6 @@
     <color name="colorPrimary">#3A74A6</color>
     <color name="colorPrimaryDark">#1D53A6</color>
     <color name="colorAccent">#E1853D</color>
+    <color name="colorDotSelected">@android:color/white</color>
+    <color name="colorDotDefault">#89C0E4</color>
 </resources>
