@@ -41,7 +41,7 @@ class StartingActivity : AppCompatActivity() {
                 startingViewModel.getShouldShowWalkthrough() -> {
                     startActivity(Intent(this, WalkthroughActivity::class.java))
                 }
-                startingViewModel.getShouldShowWelcome() -> {
+                else -> {
                     startActivity(Intent(this, WizardActivity::class.java))
                 }
             }
