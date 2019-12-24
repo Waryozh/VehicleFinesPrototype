@@ -16,43 +16,43 @@ class Repository @Inject constructor(private val prefs: SharedPreferences) {
         private const val DRIVER_LICENCE = "DRIVER_LICENCE"
     }
 
-    fun getShouldShowWalkthrough() = prefs.getBoolean(SHOULD_SHOW_WALKTHROUGH, false)
-
-    fun setShouldShowWalkthrough(shouldShowWalkthrough: Boolean) {
-        prefs.edit {
-            putBoolean(SHOULD_SHOW_WALKTHROUGH, shouldShowWalkthrough)
+    var shouldShowWalkthrough: Boolean
+        get() = prefs.getBoolean(SHOULD_SHOW_WALKTHROUGH, false)
+        set(value) {
+            prefs.edit {
+                putBoolean(SHOULD_SHOW_WALKTHROUGH, value)
+            }
         }
-    }
 
-    fun getShouldShowOverview() = prefs.getBoolean(SHOULD_SHOW_OVERVIEW, false)
-
-    fun setShouldShowOverview(shouldShowOverview: Boolean) {
-        prefs.edit {
-            putBoolean(SHOULD_SHOW_OVERVIEW, shouldShowOverview)
+    var shouldShowOverview: Boolean
+        get() = prefs.getBoolean(SHOULD_SHOW_OVERVIEW, false)
+        set(value) {
+            prefs.edit {
+                putBoolean(SHOULD_SHOW_OVERVIEW, value)
+            }
         }
-    }
 
-    fun getRegNumber() = prefs.getString(REG_NUMBER, null)
-
-    fun setRegNumber(regNumber: String) {
-        prefs.edit {
-            putString(REG_NUMBER, regNumber)
+    var regNumber: String?
+        get() = prefs.getString(REG_NUMBER, null)
+        set(value) {
+            prefs.edit {
+                putString(REG_NUMBER, value)
+            }
         }
-    }
 
-    fun getPassportNumber() = prefs.getString(PASSPORT_NUMBER, null)
-
-    fun setPassportNumber(passportNumber: String) {
-        prefs.edit {
-            putString(PASSPORT_NUMBER, passportNumber)
+    var passportNumber: String?
+        get() = prefs.getString(PASSPORT_NUMBER, null)
+        set(value) {
+            prefs.edit {
+                putString(PASSPORT_NUMBER, value)
+            }
         }
-    }
 
-    fun getDriverLicence() = prefs.getString(DRIVER_LICENCE, null)
-
-    fun setDriverLicence(driverLicence: String) {
-        prefs.edit {
-            putString(DRIVER_LICENCE, driverLicence)
+    var driverLicence: String?
+        get() = prefs.getString(DRIVER_LICENCE, null)
+        set(value) {
+            prefs.edit {
+                putString(DRIVER_LICENCE, value)
+            }
         }
-    }
 }

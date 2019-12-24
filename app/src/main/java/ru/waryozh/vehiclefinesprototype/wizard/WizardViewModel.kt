@@ -23,11 +23,23 @@ class WizardViewModel @Inject constructor(private val repository: Repository) : 
     val isDriverLicenceInvalid: LiveData<Boolean>
         get() = _isDriverLicenceInvalid
 
-    fun setRegNumber(regNumber: String) = repository.setRegNumber(regNumber.transliterate())
+    var regNumber: String?
+        get() = repository.regNumber
+        set(value) {
+            repository.regNumber = value?.transliterate()
+        }
 
-    fun setPassportNumber(passportNumber: String) = repository.setPassportNumber(passportNumber.transliterate())
+    var passportNumber: String?
+        get() = repository.passportNumber
+        set(value) {
+            repository.passportNumber = value?.transliterate()
+        }
 
-    fun setDriverLicence(driverLicence: String) = repository.setDriverLicence(driverLicence.transliterate())
+    var driverLicence: String?
+        get() = repository.driverLicence
+        set(value) {
+            repository.driverLicence = value?.transliterate()
+        }
 
     fun onRegNumberChanged(regNumber: String) {
         _isRegNumberInvalid.value = !regNumber.isValidRegNumber()

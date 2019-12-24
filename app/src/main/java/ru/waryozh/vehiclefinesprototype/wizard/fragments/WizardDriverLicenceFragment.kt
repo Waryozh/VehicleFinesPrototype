@@ -57,7 +57,7 @@ class WizardDriverLicenceFragment : Fragment(),
             // and with its error disabled, so ask view model to validate it.
             wizardViewModel.onDriverLicenceChanged(et_wizard_driver_licence.text.toString())
             if (wizardViewModel.isDriverLicenceInvalid.value == false) {
-                wizardViewModel.setDriverLicence(et_wizard_driver_licence.text.toString())
+                wizardViewModel.driverLicence = et_wizard_driver_licence.text.toString()
                 navigateToWalkthroughActivity()
             }
         }

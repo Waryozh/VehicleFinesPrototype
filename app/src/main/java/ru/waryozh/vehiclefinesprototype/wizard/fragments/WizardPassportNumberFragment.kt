@@ -56,7 +56,7 @@ class WizardPassportNumberFragment : Fragment(),
             // and with its error disabled, so ask view model to validate it.
             wizardViewModel.onPassportNumberChanged(et_wizard_passport_number.text.toString())
             if (wizardViewModel.isPassportNumberInvalid.value == false) {
-                wizardViewModel.setPassportNumber(et_wizard_passport_number.text.toString())
+                wizardViewModel.passportNumber = et_wizard_passport_number.text.toString()
                 navigateToWizardDriverLicenceFragment()
             }
         }

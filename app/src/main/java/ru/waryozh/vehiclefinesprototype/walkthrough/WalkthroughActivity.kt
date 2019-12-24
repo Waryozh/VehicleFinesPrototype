@@ -91,7 +91,7 @@ class WalkthroughActivity : AppCompatActivity() {
         }
 
         // Once we get to WalkthroughActivity, mark it as the activity that StartingActivity should start
-        walkthroughViewModel.setShouldShowWalkthrough(true)
+        walkthroughViewModel.shouldShowWalkthrough = true
     }
 
     override fun onBackPressed() {

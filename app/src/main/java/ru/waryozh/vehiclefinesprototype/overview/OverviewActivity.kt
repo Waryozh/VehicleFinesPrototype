@@ -28,15 +28,15 @@ class OverviewActivity : AppCompatActivity() {
             .inject(this)
 
         // Once we get to OverviewActivity, mark it as the activity that StartingActivity should start
-        overviewViewModel.setShouldShowOverview(true)
+        overviewViewModel.shouldShowOverview = true
 
         tv_overview_reg_number.text =
-            overviewViewModel.getRegNumber() ?: getString(R.string.overview_empty_placeholder)
+            overviewViewModel.regNumber ?: getString(R.string.overview_empty_placeholder)
 
         tv_overview_passport_number.text =
-            overviewViewModel.getPassportNumber() ?: getString(R.string.overview_empty_placeholder)
+            overviewViewModel.passportNumber ?: getString(R.string.overview_empty_placeholder)
 
         tv_overview_driver_licence.text =
-            overviewViewModel.getDriverLicence() ?: getString(R.string.overview_empty_placeholder)
+            overviewViewModel.driverLicence ?: getString(R.string.overview_empty_placeholder)
     }
 }

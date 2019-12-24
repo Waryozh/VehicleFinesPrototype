@@ -35,10 +35,10 @@ class StartingActivity : AppCompatActivity() {
         // For use only in the prototype version of the app.
         Handler().postDelayed({
             when {
-                startingViewModel.getShouldShowOverview() -> {
+                startingViewModel.shouldShowOverview -> {
                     startActivity(Intent(this, OverviewActivity::class.java))
                 }
-                startingViewModel.getShouldShowWalkthrough() -> {
+                startingViewModel.shouldShowWalkthrough -> {
                     startActivity(Intent(this, WalkthroughActivity::class.java))
                 }
                 else -> {

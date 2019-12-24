@@ -5,13 +5,15 @@ import ru.waryozh.vehiclefinesprototype.repositories.Repository
 import javax.inject.Inject
 
 class OverviewViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
-    fun getRegNumber() = repository.getRegNumber()
+    val regNumber = repository.regNumber
 
-    fun getPassportNumber() = repository.getPassportNumber()
+    val passportNumber = repository.passportNumber
 
-    fun getDriverLicence() = repository.getDriverLicence()
+    val driverLicence = repository.driverLicence
 
-    fun setShouldShowOverview(shouldShowOverview: Boolean) {
-        repository.setShouldShowOverview(shouldShowOverview)
-    }
+    var shouldShowOverview
+        get() = repository.shouldShowOverview
+        set(value) {
+            repository.shouldShowOverview = value
+        }
 }

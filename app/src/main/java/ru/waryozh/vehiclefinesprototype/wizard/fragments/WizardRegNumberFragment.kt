@@ -83,7 +83,7 @@ class WizardRegNumberFragment : Fragment(),
     }
 
     private fun navigateToWizardPassportNumberFragment() {
-        wizardViewModel.setRegNumber(et_wizard_reg_number.text.toString())
+        wizardViewModel.regNumber = et_wizard_reg_number.text.toString()
         findNavController().navigate(WizardRegNumberFragmentDirections.actionWizardRegNumberFragmentToWizardPassportNumberFragment())
     }
 

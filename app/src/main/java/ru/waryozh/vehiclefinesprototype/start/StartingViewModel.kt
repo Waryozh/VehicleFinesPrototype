@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import ru.waryozh.vehiclefinesprototype.repositories.Repository
 import javax.inject.Inject
 
-class StartingViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
-    fun getShouldShowWalkthrough() = repository.getShouldShowWalkthrough()
+class StartingViewModel @Inject constructor(repository: Repository) : ViewModel() {
+    val shouldShowWalkthrough = repository.shouldShowWalkthrough
 
-    fun getShouldShowOverview() = repository.getShouldShowOverview()
+    val shouldShowOverview = repository.shouldShowOverview
 }
